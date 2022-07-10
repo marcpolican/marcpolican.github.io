@@ -4,15 +4,4 @@ title: About
 permalink: /about/
 ---
 
-This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at [jekyllrb.com](https://jekyllrb.com/)
-
-You can find the source code for Minima at GitHub:
-[jekyll][jekyll-organization] /
-[minima](https://github.com/jekyll/minima)
-
-You can find the source code for Jekyll at GitHub:
-[jekyll][jekyll-organization] /
-[jekyll](https://github.com/jekyll/jekyll)
-
-
-[jekyll-organization]: https://github.com/jekyll
+Hi guys! To introduce myself, I have been programming games since 2002. I am currently the Engineering Director and Co-Founder of [Altitude Games](https://www.altitude-games.com/). We specialize in developing mobile games using the Unity game engine. We're also exploring the new opportunities in blockchain games. For my full CV, please visit my [LinkedIn profile](https://www.linkedin.com/in/marc-anthony-polican/)
