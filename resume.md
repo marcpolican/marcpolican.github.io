@@ -33,8 +33,6 @@ March 2014 - Present
 - Lead research and development to keep the company up-to-date with the latest tech
 - Lay down the foundation code for new games
 - Participate in executive team for company-wide decision making
-
-Achievements:
 - Shipped games:
 	- Run Run Super V
 	- Zodiac Pop
