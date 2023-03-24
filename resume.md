@@ -18,9 +18,9 @@ I have been professionally developing, maintaining and shipping games since 2002
 
 | Unity3D Game Engine | C# | C++ |
 | Mobile Game Development | PlayFab | Firebase |
-| Babylon.js | Node.js | Jenkins |
-| Web3 | Google Sheets Scripting | AWS (S3, EC2, DynamoDB) |
-| Blender (hobbyist) |
+| Babylon.js | Node.js | Typescript | 
+| Javascript | Jenkins | Web3 | 
+| Google Sheets Scripting | AWS (S3, EC2, DynamoDB) | Blender (hobbyist) |
 
 # Experience
 
