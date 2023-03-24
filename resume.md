@@ -42,7 +42,7 @@ March 2014 - Present
 <br>
 **Member - Board of Advisors**  
 [**De La Salle University - College of Computer Studies**](https://www.dlsu.edu.ph/colleges/ccs/)  
-2020 - 2022
+2018 - 2022
 
 - Give feedback and input for the game development related courses for the college
 
