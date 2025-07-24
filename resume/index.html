@@ -1,285 +1,640 @@
 <!DOCTYPE html>
-<html lang="en"><head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Resume | Marc Polican’s Blog</title>
-<meta name="generator" content="Jekyll v3.9.3" />
-<meta property="og:title" content="Resume" />
-<meta property="og:locale" content="en_US" />
-<meta name="description" content="This is Marc Polican’s website. Marc is a game programmer. It contains his resume, portfolio and contact information." />
-<meta property="og:description" content="This is Marc Polican’s website. Marc is a game programmer. It contains his resume, portfolio and contact information." />
-<link rel="canonical" href="/resume/" />
-<meta property="og:url" content="/resume/" />
-<meta property="og:site_name" content="Marc Polican’s Blog" />
-<meta property="og:type" content="website" />
-<meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Resume" />
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebPage","description":"This is Marc Polican’s website. Marc is a game programmer. It contains his resume, portfolio and contact information.","headline":"Resume","url":"/resume/"}</script>
-<!-- End Jekyll SEO tag -->
-<link rel="stylesheet" href="/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="Marc Polican&apos;s Blog" /><script async src="https://www.googletagmanager.com/gtag/js?id=G-8CJT105Z9X"></script>
-<script>
-  window['ga-disable-G-8CJT105Z9X'] = window.doNotTrack === "1" || navigator.doNotTrack === "1" || navigator.doNotTrack === "yes" || navigator.msDoNotTrack === "1";
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){window.dataLayer.push(arguments);}
-  gtag('js', new Date());
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-8CJT105Z9X"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-8CJT105Z9X');
+    </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marc Polican - Resume</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  gtag('config', 'G-8CJT105Z9X');
-</script>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+            color: #ffffff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
 
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header {
+            position: relative;
+            min-height: 60vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: radial-gradient(circle at 50% 50%, rgba(64, 224, 208, 0.1) 0%, transparent 50%);
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(circle at 20% 20%, rgba(120, 119, 198, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(64, 224, 208, 0.2) 0%, transparent 50%),
+                radial-gradient(circle at 40% 40%, rgba(255, 100, 100, 0.1) 0%, transparent 50%);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            animation: fadeInUp 1s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-title {
+            font-size: clamp(3rem, 8vw, 5rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #40e0d0 0%, #7f7fc8 50%, #ff6464 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: glow 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow {
+            from { filter: brightness(1); }
+            to { filter: brightness(1.2); }
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            margin-bottom: 2rem;
+            color: #b0b0b0;
+            font-weight: 300;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background: linear-gradient(135deg, #40e0d0 0%, #7f7fc8 100%);
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 32px rgba(64, 224, 208, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(64, 224, 208, 0.4);
+        }
+
+        .main-content {
+            padding: 80px 0;
+        }
+
+        .section {
+            margin-bottom: 80px;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 2rem;
+            background: linear-gradient(135deg, #40e0d0 0%, #ffffff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(135deg, #40e0d0 0%, #7f7fc8 100%);
+            border-radius: 2px;
+        }
+
+        .summary-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            font-size: 1.1rem;
+            color: #e0e0e0;
+            line-height: 1.8;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .summary-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(64, 224, 208, 0.1), transparent);
+            transition: left 0.5s;
+        }
+
+        .summary-card:hover::before {
+            left: 100%;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-item {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            color: #c0c0c0;
+        }
+
+        .skill-item:hover {
+            background: rgba(64, 224, 208, 0.1);
+            border-color: rgba(64, 224, 208, 0.3);
+            transform: translateY(-5px);
+        }
+
+        .experience-item {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 35px;
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .experience-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(127, 127, 200, 0.1), transparent);
+            transition: left 0.5s;
+        }
+
+        .experience-item:hover::before {
+            left: 100%;
+        }
+
+        .experience-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(64, 224, 208, 0.15);
+            border-color: rgba(64, 224, 208, 0.2);
+        }
+
+        .job-title {
+            font-size: 1.5rem;
+            color: #40e0d0;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .company-name {
+            font-size: 1.2rem;
+            color: #7f7fc8;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .company-name a {
+            color: #7f7fc8;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .company-name a:hover {
+            color: #40e0d0;
+        }
+
+        .duration {
+            color: #b0b0b0;
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            font-style: italic;
+        }
+
+        .job-description {
+            color: #e0e0e0;
+            line-height: 1.7;
+        }
+
+        .job-description ul {
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .job-description li {
+            margin-bottom: 8px;
+            color: #c0c0c0;
+        }
+
+        .education-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 35px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .education-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 100, 100, 0.1), transparent);
+            transition: left 0.5s;
+        }
+
+        .education-card:hover::before {
+            left: 100%;
+        }
+
+        .degree-title {
+            font-size: 1.4rem;
+            color: #ff6464;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .school-name {
+            font-size: 1.1rem;
+            color: #7f7fc8;
+            margin-bottom: 0.5rem;
+        }
+
+        .school-name a {
+            color: #7f7fc8;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .school-name a:hover {
+            color: #40e0d0;
+        }
+
+        .achievements {
+            margin-top: 1.5rem;
+            color: #e0e0e0;
+        }
+
+        .achievements h4 {
+            color: #40e0d0;
+            margin-bottom: 10px;
+        }
+
+        .achievements ul {
+            margin-left: 20px;
+        }
+
+        .achievements li {
+            margin-bottom: 8px;
+            color: #c0c0c0;
+        }
+
+        .achievements a {
+            color: #40e0d0;
+            text-decoration: none;
+        }
+
+        .achievements a:hover {
+            text-decoration: underline;
+        }
+
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% { transform: translateX(-50%) translateY(0); }
+            40% { transform: translateX(-50%) translateY(-10px); }
+            60% { transform: translateX(-50%) translateY(-5px); }
+        }
+
+        .scroll-indicator::after {
+            content: '↓';
+            font-size: 2rem;
+            color: #40e0d0;
+        }
+
+        @media (max-width: 768px) {
+            .skills-grid {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 15px;
+            }
+            
+            .experience-item, .education-card, .summary-card {
+                padding: 25px;
+            }
+            
+            .main-content {
+                padding: 50px 0;
+            }
+            
+            .section {
+                margin-bottom: 50px;
+            }
+        }
+    </style>
 </head>
-<body><header class="site-header">
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Marc Polican</h1>
+                <h2 class="hero-subtitle">Resume</h2>
 
-  <div class="wrapper"><a class="site-title" rel="author" href="/">Marc Polican&#39;s Blog</a><nav class="site-nav">
-        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
-        <label for="nav-trigger">
-          <span class="menu-icon">
-            <svg viewBox="0 0 18 15" width="18px" height="15px">
-              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
-            </svg>
-          </span>
-        </label>
-
-        <div class="trigger"><a class="page-link" href="/portfolio/">Portfolio</a><a class="page-link" href="/resume/">Resume</a></div>
-      </nav></div>
-</header>
-<main class="page-content" aria-label="Content">
-      <div class="wrapper">
-        <article class="post">
-
-  <header class="post-header">
-    <h1 class="post-title">Resume</h1>
-  </header>
-
-  <div class="post-content">
-    <h1 id="marc-anthony-polican">Marc Anthony Polican</h1>
-
-<ul>
-  <li>📧: marcpolican (at) gmail.com</li>
-  <li>📧: pocanman (at) gmail.com</li>
-  <li>🌐: <a href="https://linkedin.com/in/marc-anthony-polican">Linked In</a></li>
-  <li>🌐: <a href="https://github.com/marcpolican">Github</a></li>
-</ul>
-
-<h1 id="summary">Summary</h1>
-
-<p>A software engineer with 10 years of Unity experience building free to play casual games for mobile devices. Shipped at least 17 games across multiple platforms throughout my career. I am hungry to build a hit game with millions of players.</p>
-
-<h1 id="skills">Skills</h1>
-
-<table>
-  <tbody>
-    <tr>
-      <td>Unity3D Game Engine</td>
-      <td>C#</td>
-      <td>C++</td>
-    </tr>
-    <tr>
-      <td>Mobile Game Development</td>
-      <td>PlayFab</td>
-      <td>Firebase</td>
-    </tr>
-    <tr>
-      <td>Babylon.js</td>
-      <td>Node.js</td>
-      <td>Typescript</td>
-    </tr>
-    <tr>
-      <td>Javascript</td>
-      <td>Jenkins</td>
-      <td>Web3</td>
-    </tr>
-    <tr>
-      <td>Google Sheets Scripting</td>
-      <td>AWS (S3, EC2, DynamoDB)</td>
-      <td>Blender (hobbyist)</td>
-    </tr>
-  </tbody>
-</table>
-
-<h1 id="experience">Experience</h1>
-
-<p><strong>Senior Software Engineer</strong><br />
-<a href="https://revolvinggames.com/"><strong>Revolving Games</strong></a><br />
-April 2024 - Present</p>
-
-<ul>
-  <li>Developed gameplay features and UI for War of Nova and Hatchlings using Unity</li>
-  <li>Built and integrated the in-game chat system for War of Nova</li>
-  <li>Designed and implemented various UI components, including menus and popups</li>
-  <li>Optimized Hatchlings for improved performance and faster load times on WebGL</li>
-  <li>Conducted exploratory R&amp;D on topics such as Web3 integration and Unity post-processing techniques</li>
-</ul>
-
-<p><strong>Engineering Director and Co-Founder</strong><br />
-<a href="https://altitude-games.com/"><strong>Altitude Games Pte. Ltd.</strong></a><br />
-March 2014 - April 2024</p>
-
-<ul>
-  <li>Head of the software engineering department</li>
-  <li>Primary decision maker for anything technical related</li>
-  <li>Work on research and development to improve our development processes</li>
-  <li>Come up with solutions and alternatives when teams are stuck on a technical issue</li>
-  <li>Mentor software engineers, giving just in time feedback and quarterly one-on-ones</li>
-  <li>Conduct technical interviews and evaluations for the hiring process for engineers</li>
-  <li>Develop Unity game framework and tools that is shared across teams</li>
-  <li>Worked on and released the following games:
-    <ul>
-      <li><a href="/portfolio/#run-run-super-v">Run Run Super V</a></li>
-      <li><a href="/portfolio/#zodiac-pop">Zodiac Pop</a></li>
-      <li><a href="/portfolio/#sarah-g-popsters">Sarah G Popsters</a></li>
-      <li><a href="/portfolio/#battle-racers">Battle Racers</a></li>
-      <li><a href="/portfolio/#arcadeum-arena">Arcadeum Arena</a></li>
-    </ul>
-  </li>
-</ul>
-
-<p><br />
-<strong>Member - Board of Advisors</strong><br />
-<a href="https://www.dlsu.edu.ph/colleges/ccs/"><strong>De La Salle University - College of Computer Studies</strong></a><br />
-2018 - 2022</p>
-
-<ul>
-  <li>Give feedback and input for the game development related courses for the college</li>
-</ul>
-
-<p><br />
-<strong>Senior Game Programmer</strong><br />
-<a href="https://boomzap.com"><strong>Boomzap Entertainment</strong></a><br />
-Oct 2010 - Feb 2014 (3 years 5 months)</p>
-
-<ul>
-  <li>Ported PC games to iOS</li>
-  <li>In charge of development and maintenance iOS codebase</li>
-  <li>Released several games to the App Store</li>
-  <li>Development of new games intended for iOS devices (unreleased)</li>
-  <li>Worked on and released the following games on iOS:
-    <ul>
-      <li><a href="/portfolio/#awakening-series">Awakening 1 and 2</a></li>
-      <li><a href="/portfolio/#antique-road-trip">Antique Road Trip 1 and 2</a></li>
-      <li><a href="/portfolio/#botanica">Botanica</a></li>
-    </ul>
-  </li>
-</ul>
-
-<p><br />
-<strong>Studio Lead Programmer</strong><br />
-<a href="https://gameloft.com"><strong>Gameloft Manila Office</strong></a><br />
-Oct 2009 - Sep 2010 (1 year)</p>
-
-<ul>
-  <li>Go-to-person for technical problems</li>
-  <li>Check projects regularly for technical issues and find solutions for these.</li>
-  <li>Help projects meet their deadlines</li>
-  <li>Conduct performance reviews</li>
-</ul>
-
-<p><br />
-<strong>Senior Game Programmer</strong><br />
-<a href="https://gameloft.com"><strong>Gameloft Manila Office</strong></a><br />
-Jan 2009 - Oct 2009 (10 months)</p>
-
-<ul>
-  <li>Lead a small team in porting games to the target platforms</li>
-  <li>Estimate tasks and work with the producer to come up with a realistic schedule</li>
-  <li>Worked on and shipped the following games:
-    <ul>
-      <li><a href="/portfolio/#hero-of-sparta-psp">Hero of Sparta PSP</a></li>
-      <li><a href="/portfolio/#lets-golf-psp">Let’s Golf PSP</a></li>
-      <li><a href="/portfolio/#brain-challenge-dsi">Brain Challenge DSi</a></li>
-      <li><a href="/portfolio/#popstar-dsi">Popstar DSi</a></li>
-    </ul>
-  </li>
-</ul>
-
-<p><br />
-<strong>Senior Game Programmer</strong><br />
-<a href="https://www.linkedin.com/company/blueprint-gaming-ltd/"><strong>Blueprint Gaming</strong></a><br />
-Jul 2006 - Oct 2008 (2 years 4 months)</p>
-
-<ul>
-  <li>Design and development of internal 2D game engine based on DirectX</li>
-  <li>Developed and released skill based games for the game cabinets in UK pubs</li>
-  <li>Initiated source control practice using Subversion</li>
-  <li>Worked on and shipped the following games:
-    <ul>
-      <li><a href="/portfolio/#lucky-break-pool">Lucky Break Pool</a></li>
-      <li><a href="/portfolio/#slapshot-air-hockey">SlapShot Air Hockey</a></li>
-    </ul>
-  </li>
-</ul>
-
-<p><br />
-<strong>Software Engineer</strong><br />
-<a href="https://www.accenture.com/"><strong>Accenture</strong></a><br />
-Feb 2005 - Jul 2006 (1 year 6 months)</p>
-
-<ul>
-  <li>Worked on an application maintenance project which involves implementation bug fixes and changerequests. The products involved are the client’s online casino gaming systems.</li>
-  <li>Worked on a Java-based web application to track different ad campaigns of the client</li>
-  <li>BS7799 coordinator and the technical coordinator for the project</li>
-  <li>Responsible for setting up the technical infrastructure of the offshore project when it was still starting</li>
-</ul>
-
-<p><br />
-<strong>Game Programmer</strong><br />
-<a href="https://www.anino.co/"><strong>Anino Entertainment</strong></a><br />
-May 2002 - Jun 2004 (2 years 2 months)</p>
-
-<ul>
-  <li>Worked on the first Philippine made PC Game: <a href="/portfolio/#anito-defend-a-land-enraged">Anito</a></li>
-  <li>Write tools and character AI for Anito</li>
-  <li>Research and development for the company’s first PalmOS game.</li>
-</ul>
-
-<p><br /></p>
-<h1 id="education">Education</h1>
-
-<p><strong>Bachelor of Science in Computer Science Major in Software</strong><br />
-<a href="https://www.dlsu.edu.ph/colleges/ccs/"><strong>De La Salle University - College of Computer Studies</strong></a><br />
-Jun 1998 - Apr 2002</p>
-
-<p><strong>Achievements:</strong></p>
-
-<ul>
-  <li>Silver Medal for Outstanding Thesis entitled:<br />
-[Bin]:Facial Animation with Text-to-Speech Synthesizer</li>
-  <li>Dean’s Lister for 4 times.</li>
-</ul>
-
-
-  </div>
-
-</article>
-
-      </div>
-    </main><footer class="site-footer h-card">
-  <data class="u-url" href="/"></data>
-
-  <div class="wrapper">
-
-    <div class="footer-col-wrapper">
-      <div class="footer-col">
-        <p class="feed-subscribe">
-          <a href="/feed.xml">
-            <svg class="svg-icon orange">
-              <use xlink:href="/assets/minima-social-icons.svg#rss"></use>
-            </svg><span>Subscribe</span>
-          </a>
-        </p>
-      </div>
-      <div class="footer-col">
-        <p>This is Marc Polican&#39;s website. Marc is a game programmer. It contains his resume, portfolio and contact information.</p>
-      </div>
+                <a href="/" class="cta-button">Portfolio</a> 
+                <a href="https://www.linkedin.com/in/marc-anthony-polican/" class="cta-button">LinkedIn</a> 
+                <a href="https://github.com/marcpolican" class="cta-button">Github</a>
+            </div>
+        </div>
+        <div class="scroll-indicator"></div>
     </div>
 
-    <div class="social-links"><ul class="social-media-list"></ul>
-</div>
+    <div class="main-content">
+        <div class="container">
+            <!-- Summary Section -->
+            <section class="section">
+                <h2 class="section-title">Summary</h2>
+                <div class="summary-card">
+                    A software engineer with 10 years of Unity experience building free to play casual games for mobile devices. Shipped at least 17 games across multiple platforms throughout my career. I am hungry to build a hit game with millions of players.
+                </div>
+            </section>
 
-  </div>
+            <!-- Skills Section -->
+            <section class="section">
+                <h2 class="section-title">Skills</h2>
+                <div class="skills-grid">
+                    <div class="skill-item">Unity3D Game Engine</div>
+                    <div class="skill-item">C#</div>
+                    <div class="skill-item">C++</div>
+                    <div class="skill-item">Mobile Game Development</div>
+                    <div class="skill-item">PlayFab</div>
+                    <div class="skill-item">Firebase</div>
+                    <div class="skill-item">Babylon.js</div>
+                    <div class="skill-item">Node.js</div>
+                    <div class="skill-item">Typescript</div>
+                    <div class="skill-item">Javascript</div>
+                    <div class="skill-item">Jenkins</div>
+                    <div class="skill-item">Web3</div>
+                    <div class="skill-item">Google Sheets Scripting</div>
+                    <div class="skill-item">AWS (S3, EC2, DynamoDB)</div>
+                    <div class="skill-item">Blender (hobbyist)</div>
+                </div>
+            </section>
 
-</footer>
+            <!-- Experience Section -->
+            <section class="section">
+                <h2 class="section-title">Experience</h2>
+
+                <div class="experience-item">
+                    <div class="job-title">Senior Software Engineer</div>
+                    <div class="company-name"><a href="https://revolvinggames.com/" target="_blank">Revolving Games</a></div>
+                    <div class="duration">April 2024 - Present</div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Developed gameplay features and UI for War of Nova and Hatchlings using Unity</li>
+                            <li>Built and integrated the in-game chat system for War of Nova</li>
+                            <li>Designed and implemented various UI components, including menus and popups</li>
+                            <li>Optimized Hatchlings for improved performance and faster load times on WebGL</li>
+                            <li>Conducted exploratory R&D on topics such as Web3 integration and Unity post-processing techniques</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-title">Engineering Director and Co-Founder</div>
+                    <div class="company-name"><a href="https://altitude-games.com/" target="_blank">Altitude Games Pte. Ltd.</a></div>
+                    <div class="duration">March 2014 - April 2024</div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Head of the software engineering department</li>
+                            <li>Primary decision maker for anything technical related</li>
+                            <li>Work on research and development to improve our development processes</li>
+                            <li>Come up with solutions and alternatives when teams are stuck on a technical issue</li>
+                            <li>Mentor software engineers, giving just in time feedback and quarterly one-on-ones</li>
+                            <li>Conduct technical interviews and evaluations for the hiring process for engineers</li>
+                            <li>Develop Unity game framework and tools that is shared across teams</li>
+                            <li>Worked on and released the following games:</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-title">Member - Board of Advisors</div>
+                    <div class="company-name"><a href="https://www.dlsu.edu.ph/colleges/ccs/" target="_blank">De La Salle University - College of Computer Studies</a></div>
+                    <div class="duration">2018 - 2022</div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Give feedback and input for the game development related courses for the college</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-title">Senior Game Programmer</div>
+                    <div class="company-name"><a href="https://boomzap.com" target="_blank">Boomzap Entertainment</a></div>
+                    <div class="duration">Oct 2010 - Feb 2014 (3 years 5 months)</div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Ported PC games to iOS</li>
+                            <li>In charge of development and maintenance iOS codebase</li>
+                            <li>Released several games to the App Store</li>
+                            <li>Development of new games intended for iOS devices (unreleased)</li>
+                            <li>Worked on and released the following games on iOS:</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-title">Studio Lead Programmer</div>
+                    <div class="company-name"><a href="https://gameloft.com" target="_blank">Gameloft Manila Office</a></div>
+                    <div class="duration">Oct 2009 - Sep 2010 (1 year)</div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Go-to-person for technical problems</li>
+                            <li>Check projects regularly for technical issues and find solutions for these.</li>
+                            <li>Help projects meet their deadlines</li>
+                            <li>Conduct performance reviews</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-title">Senior Game Programmer</div>
+                    <div class="company-name"><a href="https://gameloft.com" target="_blank">Gameloft Manila Office</a></div>
+                    <div class="duration">Jan 2009 - Oct 2009 (10 months)</div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Lead a small team in porting games to the target platforms</li>
+                            <li>Estimate tasks and work with the producer to come up with a realistic schedule</li>
+                            <li>Worked on and shipped the following games:</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-title">Senior Game Programmer</div>
+                    <div class="company-name"><a href="https://www.linkedin.com/company/blueprint-gaming-ltd/" target="_blank">Blueprint Gaming</a></div>
+                    <div class="duration">Jul 2006 - Oct 2008 (2 years 4 months)</div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Design and development of internal 2D game engine based on DirectX</li>
+                            <li>Developed and released skill based games for the game cabinets in UK pubs</li>
+                            <li>Initiated source control practice using Subversion</li>
+                            <li>Worked on and shipped the following games:</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-title">Software Engineer</div>
+                    <div class="company-name"><a href="https://www.accenture.com/" target="_blank">Accenture</a></div>
+                    <div class="duration">Feb 2005 - Jul 2006 (1 year 6 months)</div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Worked on an application maintenance project which involves implementation bug fixes and changerequests. The products involved are the client's online casino gaming systems.</li>
+                            <li>Worked on a Java-based web application to track different ad campaigns of the client</li>
+                            <li>BS7799 coordinator and the technical coordinator for the project</li>
+                            <li>Responsible for setting up the technical infrastructure of the offshore project when it was still starting</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="experience-item">
+                    <div class="job-title">Game Programmer</div>
+                    <div class="company-name"><a href="https://www.anino.co/" target="_blank">Anino Entertainment</a></div>
+                    <div class="duration">May 2002 - Jun 2004 (2 years 2 months)</div>
+                    <div class="job-description">
+                        <ul>
+                            <li>Worked on the first Philippine made PC Game:</li>
+                            <li><a href="/portfolio/#anito-defend-a-land-enraged">Anito</a> - Write tools and character AI for Anito</li>
+                            <li>Research and development for the company's first PalmOS game.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Education Section -->
+            <section class="section">
+                <h2 class="section-title">Education</h2>
+                <div class="education-card">
+                    <div class="degree-title">Bachelor of Science in Computer Science Major in Software</div>
+                    <div class="school-name"><a href="https://www.dlsu.edu.ph/colleges/ccs/" target="_blank">De La Salle University - College of Computer Studies</a></div>
+                    <div class="duration">Jun 1998 - Apr 2002</div>
+                    <div class="achievements">
+                        <h4>Achievements:</h4>
+                        <ul>
+                            <li>Silver Medal for Outstanding Thesis entitled: <a href="#">Bin</a>:Facial Animation with Text-to-Speech Synthesizer</li>
+                            <li>Dean's Lister for 4 times.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Add subtle parallax effect to header
+        // window.addEventListener('scroll', () => {
+        //     const scrolled = window.pageYOffset;
+        //     const header = document.querySelector('.header');
+        //     if (header) {
+        //         header.style.transform = `translateY(${scrolled * 0.5}px)`;
+        //     }
+        // });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observe all experience items and cards for animation
+        document.querySelectorAll('.experience-item, .education-card, .skill-item').forEach((item, index) => {
+            item.style.opacity = '0';
+            item.style.transform = 'translateY(30px)';
+            item.style.transition = `all 0.6s ease ${index * 0.1}s`;
+            observer.observe(item);
+        });
+    </script>
 </body>
-
 </html>
